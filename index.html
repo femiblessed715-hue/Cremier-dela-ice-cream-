@@ -6,20 +6,159 @@
   <meta name="description" content="Kofebd Global Resources — Early Bell Ice Cream, ice cream powder distribution, machine training and business solutions across Nigeria.">
   <title>Kofebd Global Resources | Early Bell Ice Cream</title>
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* MACHINE SLIDER */
+    .machines-section {
+      padding: 80px 20px;
+      background: #fff8ef;
+    }
+
+    .machine-slider {
+      max-width: 900px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+
+    .machine-slide {
+      display: none;
+      animation: machineFade 0.4s ease;
+    }
+
+    .machine-slide.active {
+      display: block;
+    }
+
+    .machine-image-box {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+      max-width: 800px;
+      margin: 0 auto 25px;
+    }
+
+    .machine-image-box img {
+      width: 100%;
+      height: 450px;
+      object-fit: contain;
+      display: block;
+      border-radius: 15px;
+    }
+
+    .machine-title {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 15px 0 8px;
+      color: #222;
+    }
+
+    .machine-description {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .machine-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .machine-btn {
+      border: none;
+      background: #f28c28;
+      color: white;
+      padding: 13px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .machine-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .machine-counter {
+      font-weight: 700;
+      color: #555;
+      min-width: 70px;
+    }
+
+    .machine-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .machine-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .machine-dot.active {
+      background: #f28c28;
+      transform: scale(1.25);
+    }
+
+    @keyframes machineFade {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .machine-image-box img {
+        height: 300px;
+      }
+
+      .machine-title {
+        font-size: 24px;
+      }
+
+      .machine-btn {
+        padding: 11px 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
   <header class="site-header">
     <nav class="nav container">
       <a class="brand" href="#home" aria-label="Kofebd Global Resources home">
         <span class="brand-mark">KG</span>
-        <span><strong>KOFEBD</strong><small>GLOBAL RESOURCES</small></span>
+        <span>
+          <strong>KOFEBD</strong>
+          <small>GLOBAL RESOURCES</small>
+        </span>
       </a>
+
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#services">Services</a>
+        <a href="#machines">Machines</a>
         <a href="#gallery">Gallery</a>
         <a class="nav-cta" href="#contact">Contact</a>
       </div>
@@ -27,16 +166,29 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-overlay"></div>
+
       <div class="container hero-content">
         <p class="eyebrow">EARLY BELL ICE CREAM • NIGERIA</p>
-        <h1>Great Ice Cream.<br><span>Great Business.</span></h1>
-        <p class="hero-copy">Quality and affordable ice cream solutions for customers, retailers and growing businesses across Nigeria.</p>
+
+        <h1>
+          Great Ice Cream.<br>
+          <span>Great Business.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Quality and affordable ice cream solutions for customers,
+          retailers and growing businesses across Nigeria.
+        </p>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="#products">Explore Products</a>
           <a class="btn btn-light" href="#contact">Talk to Us</a>
         </div>
+
         <div class="hero-badges">
           <span>✓ Free delivery to your state</span>
           <span>✓ Machine operation training</span>
@@ -45,160 +197,791 @@
       </div>
     </section>
 
+
+    <!-- STATS -->
     <section class="stats">
       <div class="container stats-grid">
-        <div><strong>2022</strong><span>Founded</span></div>
-        <div><strong>3</strong><span>Core product flavours</span></div>
-        <div><strong>Nigeria</strong><span>Nationwide distribution</span></div>
-        <div><strong>360°</strong><span>Business support</span></div>
+        <div>
+          <strong>2022</strong>
+          <span>Founded</span>
+        </div>
+
+        <div>
+          <strong>3</strong>
+          <span>Core product flavours</span>
+        </div>
+
+        <div>
+          <strong>Nigeria</strong>
+          <span>Nationwide distribution</span>
+        </div>
+
+        <div>
+          <strong>360°</strong>
+          <span>Business support</span>
+        </div>
       </div>
     </section>
 
+
+    <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container two-col">
+
         <div>
           <p class="eyebrow">WHO WE ARE</p>
-          <h2>Building better ice cream businesses in Nigeria.</h2>
-          <p>KOFEBD GLOBAL RESOURCES was incorporated on 11 February 2022, with its head office at No. 23 Sabon Geri, Abuja, and a regional office at 400 Agbani Road, Enugu.</p>
-          <p>We manufacture <strong>Early Bell Ice Cream</strong> and distribute <strong>Creamier Dela ice cream powder</strong> in Nigeria. We also provide practical support for customers using soft-serve and batch ice cream machines.</p>
+
+          <h2>
+            Building better ice cream businesses in Nigeria.
+          </h2>
+
+          <p>
+            KOFEBD GLOBAL RESOURCES was incorporated on 11 February 2022,
+            with its head office at No. 23 Sabon Geri, Abuja, and a regional
+            office at 400 Agbani Road, Enugu.
+          </p>
+
+          <p>
+            We manufacture <strong>Early Bell Ice Cream</strong> and distribute
+            <strong>Creamier Dela ice cream powder</strong> in Nigeria.
+            We also provide practical support for customers using soft-serve
+            and batch ice cream machines.
+          </p>
+
           <div class="location-cards">
-            <div><b>Head Office</b><span>No. 23 Sabon Geri, Abuja</span></div>
-            <div><b>Regional Office</b><span>400 Agbani Road, Enugu</span></div>
+            <div>
+              <b>Head Office</b>
+              <span>No. 23 Sabon Geri, Abuja</span>
+            </div>
+
+            <div>
+              <b>Regional Office</b>
+              <span>400 Agbani Road, Enugu</span>
+            </div>
           </div>
         </div>
+
         <div class="image-card">
           <img src="images/office.jpg" alt="Kofebd Global Resources office building">
         </div>
+
       </div>
     </section>
 
+
+    <!-- MISSION -->
     <section class="mission-section">
       <div class="container mission-grid">
-        <article><div class="icon">🎯</div><p class="eyebrow">OUR MISSION</p><h3>Quality at an affordable price.</h3><p>To provide a quality and affordable brand for our customers.</p></article>
-        <article><div class="icon">🚀</div><p class="eyebrow">OUR VISION</p><h3>Be everywhere customers shop.</h3><p>To be in retail outlets, QSRs, malls and supermarkets across Nigeria.</p></article>
-        <article><div class="icon">🤝</div><p class="eyebrow">OUR VALUES</p><h3>Integrity. Teamwork. Innovation.</h3><p>We work together, improve continuously and put integrity at the centre of our service.</p></article>
+
+        <article>
+          <div class="icon">🎯</div>
+          <p class="eyebrow">OUR MISSION</p>
+          <h3>Quality at an affordable price.</h3>
+          <p>
+            To provide a quality and affordable brand for our customers.
+          </p>
+        </article>
+
+        <article>
+          <div class="icon">🚀</div>
+          <p class="eyebrow">OUR VISION</p>
+          <h3>Be everywhere customers shop.</h3>
+          <p>
+            To be in retail outlets, QSRs, malls and supermarkets across Nigeria.
+          </p>
+        </article>
+
+        <article>
+          <div class="icon">🤝</div>
+          <p class="eyebrow">OUR VALUES</p>
+          <h3>Integrity. Teamwork. Innovation.</h3>
+          <p>
+            We work together, improve continuously and put integrity at the
+            centre of our service.
+          </p>
+        </article>
+
       </div>
     </section>
 
+
+    <!-- PRODUCTS -->
     <section id="products" class="section soft-bg">
       <div class="container">
+
         <div class="section-heading">
-          <div><p class="eyebrow">OUR PRODUCTS</p><h2>Flavours made for value.</h2></div>
-          <p>Vanilla, Strawberry and Banana — designed to give customers great taste and value for money.</p>
+          <div>
+            <p class="eyebrow">OUR PRODUCTS</p>
+            <h2>Flavours made for value.</h2>
+          </div>
+
+          <p>
+            Vanilla, Strawberry and Banana — designed to give customers
+            great taste and value for money.
+          </p>
         </div>
+
         <div class="product-grid">
-          <article class="product-card vanilla"><div class="flavour-orb">🍦</div><h3>Vanilla</h3><p>Creamy, smooth and familiar — a versatile favourite.</p><a href="#contact">Enquire →</a></article>
-          <article class="product-card strawberry"><div class="flavour-orb">🍓</div><h3>Strawberry</h3><p>A bright fruity option for customers of all ages.</p><a href="#contact">Enquire →</a></article>
-          <article class="product-card banana"><div class="flavour-orb">🍌</div><h3>Banana</h3><p>A rich, enjoyable flavour for everyday serving.</p><a href="#contact">Enquire →</a></article>
+
+          <article class="product-card vanilla">
+            <div class="flavour-orb">🍦</div>
+            <h3>Vanilla</h3>
+            <p>
+              Creamy, smooth and familiar — a versatile favourite.
+            </p>
+            <a href="#contact">Enquire →</a>
+          </article>
+
+          <article class="product-card strawberry">
+            <div class="flavour-orb">🍓</div>
+            <h3>Strawberry</h3>
+            <p>
+              A bright fruity option for customers of all ages.
+            </p>
+            <a href="#contact">Enquire →</a>
+          </article>
+
+          <article class="product-card banana">
+            <div class="flavour-orb">🍌</div>
+            <h3>Banana</h3>
+            <p>
+              A rich, enjoyable flavour for everyday serving.
+            </p>
+            <a href="#contact">Enquire →</a>
+          </article>
+
         </div>
       </div>
     </section>
 
+
+    <!-- SERVICES -->
     <section id="services" class="section">
       <div class="container">
+
         <div class="section-heading centered">
           <p class="eyebrow">OUR SERVICES</p>
+
           <h2>More than a product supplier.</h2>
-          <p>We help customers understand the equipment, product and numbers behind a successful ice cream operation.</p>
+
+          <p>
+            We help customers understand the equipment, product and numbers
+            behind a successful ice cream operation.
+          </p>
         </div>
+
         <div class="service-grid">
-          <article><span>01</span><h3>Machine Operation</h3><p>Training for soft-serve and batch machine operation.</p></article>
-          <article><span>02</span><h3>Product Handling</h3><p>Guidance on proper handling and serving practices.</p></article>
-          <article><span>03</span><h3>Product Costing</h3><p>Support with understanding costs and building a profitable operation.</p></article>
-          <article><span>04</span><h3>Delivery Support</h3><p>Products are delivered using safe handling practices to reduce complaints.</p></article>
+
+          <article>
+            <span>01</span>
+            <h3>Machine Operation</h3>
+            <p>
+              Training for soft-serve and batch machine operation.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Product Handling</h3>
+            <p>
+              Guidance on proper handling and serving practices.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Product Costing</h3>
+            <p>
+              Support with understanding costs and building a profitable operation.
+            </p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h3>Delivery Support</h3>
+            <p>
+              Products are delivered using safe handling practices to reduce complaints.
+            </p>
+          </article>
+
         </div>
       </div>
     </section>
 
+
+    <!-- TRAINING -->
     <section class="training-banner">
       <div class="container training-content">
+
         <div>
           <p class="eyebrow">PRACTICAL TRAINING</p>
-          <h2>Learn the machine. Understand the product. Grow the business.</h2>
-          <p>Our training approach covers machine operation, product handling and product costing so customers can operate with confidence.</p>
-          <a class="btn btn-primary" href="#contact">Request Training</a>
+
+          <h2>
+            Learn the machine. Understand the product. Grow the business.
+          </h2>
+
+          <p>
+            Our training approach covers machine operation, product handling
+            and product costing so customers can operate with confidence.
+          </p>
+
+          <a class="btn btn-primary" href="#contact">
+            Request Training
+          </a>
         </div>
-        <img src="images/training.jpg" alt="Kofebd Global Resources ice cream machine training session">
+
+        <img
+          src="images/training.jpg"
+          alt="Kofebd Global Resources ice cream machine training session"
+        >
+
       </div>
     </section>
 
-    <section id="gallery" class="section soft-bg">
+
+    <!-- MACHINES -->
+    <section id="machines" class="machines-section">
+
       <div class="container">
+
+        <div class="section-heading centered">
+          <p class="eyebrow">OUR MACHINES</p>
+
+          <h2>Ice Cream Machines</h2>
+
+          <p>
+            Choose from our range of soft-serve and batch ice cream machines.
+            View one machine at a time.
+          </p>
+        </div>
+
+
+        <div class="machine-slider">
+
+          <!-- MACHINE 1 -->
+          <div class="machine-slide active">
+
+            <div class="machine-image-box">
+              <img
+                src="images/soft-serve-machine.jpg"
+                alt="Table Top Soft Serve Machine"
+              >
+            </div>
+
+            <h3 class="machine-title">
+              Table Top Soft Serve Machine
+            </h3>
+
+            <p class="machine-description">
+              A compact soft-serve machine suitable for serving smooth and
+              creamy ice cream in shops, restaurants and small businesses.
+            </p>
+
+          </div>
+
+
+          <!-- MACHINE 2 -->
+          <div class="machine-slide">
+
+            <div class="machine-image-box">
+              <img
+                src="images/batch-machine.jpg"
+                alt="Batch Machine"
+              >
+            </div>
+
+            <h3 class="machine-title">
+              Batch Machine
+            </h3>
+
+            <p class="machine-description">
+              A batch ice cream machine designed for producing quality
+              ice cream efficiently for growing businesses.
+            </p>
+
+          </div>
+
+
+          <!-- MACHINE 3 -->
+          <div class="machine-slide">
+
+            <div class="machine-image-box">
+              <img
+                src="images/denver-machine.jpg"
+                alt="Denver Soft Serve Machine"
+              >
+            </div>
+
+            <h3 class="machine-title">
+              Denver Soft Serve Machine
+            </h3>
+
+            <p class="machine-description">
+              A commercial soft-serve machine suitable for businesses
+              serving multiple ice cream flavours.
+            </p>
+
+          </div>
+
+
+          <!-- MACHINE 4 -->
+          <div class="machine-slide">
+
+            <div class="machine-image-box">
+              <img
+                src="images/batch-machine-2.jpg"
+                alt="Batch Ice Cream Machine"
+              >
+            </div>
+
+            <h3 class="machine-title">
+              Batch Machine
+            </h3>
+
+            <p class="machine-description">
+              A commercial batch machine for ice cream production and
+              business operations.
+            </p>
+
+          </div>
+
+
+          <!-- MACHINE 5 -->
+          <div class="machine-slide">
+
+            <div class="machine-image-box">
+              <img
+                src="images/denver-machine-2.jpg"
+                alt="Denver Ice Cream Machine"
+              >
+            </div>
+
+            <h3 class="machine-title">
+              Denver Ice Cream Machine
+            </h3>
+
+            <p class="machine-description">
+              A commercial ice cream machine designed for reliable
+              serving and business use.
+            </p>
+
+          </div>
+
+
+          <!-- CONTROLS -->
+          <div class="machine-controls">
+
+            <button
+              class="machine-btn"
+              type="button"
+              onclick="changeMachine(-1)"
+            >
+              ← Previous
+            </button>
+
+            <span
+              class="machine-counter"
+              id="machineCounter"
+            >
+              1 / 5
+            </span>
+
+            <button
+              class="machine-btn"
+              type="button"
+              onclick="changeMachine(1)"
+            >
+              Next →
+            </button>
+
+          </div>
+
+
+          <!-- DOTS -->
+          <div class="machine-dots">
+
+            <span
+              class="machine-dot active"
+              onclick="showMachine(0)"
+            ></span>
+
+            <span
+              class="machine-dot"
+              onclick="showMachine(1)"
+            ></span>
+
+            <span
+              class="machine-dot"
+              onclick="showMachine(2)"
+            ></span>
+
+            <span
+              class="machine-dot"
+              onclick="showMachine(3)"
+            ></span>
+
+            <span
+              class="machine-dot"
+              onclick="showMachine(4)"
+            ></span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section soft-bg">
+
+      <div class="container">
+
         <div class="section-heading centered">
           <p class="eyebrow">GALLERY</p>
-          <h2>Our people, machines and workplace.</h2>
+
+          <h2>Our people and workplace.</h2>
         </div>
+
         <div class="gallery">
-          <figure class="gallery-large"><img src="images/reception.jpg" alt="Kofebd reception area"></figure>
-          <figure><img src="images/soft-serve-machine.jpg" alt="Commercial soft-serve ice cream machine"></figure>
-          <figure><img src="images/batch-machine.jpg" alt="Commercial batch ice cream machine"></figure>
-          <figure><img src="images/denver-machine.jpg" alt="Commercial three-flavour ice cream machine"></figure>
-          <figure><img src="images/batch-machine-2.jpg" alt="Commercial ice cream batch machine"></figure>
-          <figure><img src="images/denver-machine-2.jpg" alt="Commercial ice cream machine"></figure>
+
+          <figure class="gallery-large">
+            <img
+              src="images/reception.jpg"
+              alt="Kofebd reception area"
+            >
+          </figure>
+
+          <figure>
+            <img
+              src="images/office.jpg"
+              alt="Kofebd Global Resources office"
+            >
+          </figure>
+
+          <figure>
+            <img
+              src="images/training.jpg"
+              alt="Kofebd training session"
+            >
+          </figure>
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- BUSINESS -->
     <section class="business-section">
+
       <div class="container business-grid">
+
         <div>
+
           <p class="eyebrow">A BUSINESS PARTNER</p>
-          <h2>From production to packaging, we provide solutions.</h2>
-          <p>Whether you are setting up an ice cream business or expanding your distribution, our team supports customers with products, equipment knowledge and practical training.</p>
+
+          <h2>
+            From production to packaging, we provide solutions.
+          </h2>
+
+          <p>
+            Whether you are setting up an ice cream business or expanding
+            your distribution, our team supports customers with products,
+            equipment knowledge and practical training.
+          </p>
+
           <ul class="check-list">
             <li>Early Bell Ice Cream</li>
             <li>Creamier Dela ice cream powder distribution</li>
             <li>Soft-serve and batch machine training</li>
             <li>Nationwide product delivery</li>
           </ul>
+
         </div>
+
         <div class="quote-card">
           <div class="quote-mark">“</div>
           <p>People • Products • Prosperity</p>
           <small>KOFEBD GLOBAL RESOURCES</small>
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- CONTACT -->
     <section id="contact" class="contact-section">
+
       <div class="container contact-grid">
+
         <div>
+
           <p class="eyebrow">CONTACT US</p>
-          <h2>Ready to start or grow your ice cream business?</h2>
-          <p>Reach out for product enquiries, machine training, product handling or costing support.</p>
+
+          <h2>
+            Ready to start or grow your ice cream business?
+          </h2>
+
+          <p>
+            Reach out for product enquiries, machine training,
+            product handling or costing support.
+          </p>
+
           <div class="contact-list">
-            <a href="mailto:kofebdglobalresource@gmail.com">✉️ kofebdglobalresource@gmail.com</a>
-            <a href="tel:+2347039493653">📞 +234 703 949 3653</a>
-            <a href="https://wa.me/2347039493653" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
-            <a href="https://www.kofebdglobalresources.com" target="_blank" rel="noopener">🌐 www.kofebdglobalresources.com</a>
+
+            <a href="mailto:kofebdglobalresource@gmail.com">
+              ✉️ kofebdglobalresource@gmail.com
+            </a>
+
+            <a href="tel:+2347039493653">
+              📞 +234 703 949 3653
+            </a>
+
+            <a
+              href="https://wa.me/2347039493653"
+              target="_blank"
+              rel="noopener"
+            >
+              💬 Chat on WhatsApp
+            </a>
+
+            <a
+              href="https://www.kofebdglobalresources.com"
+              target="_blank"
+              rel="noopener"
+            >
+              🌐 www.kofebdglobalresources.com
+            </a>
+
           </div>
+
         </div>
-        <form class="contact-form" onsubmit="sendMessage(event)">
-          <input id="name" type="text" placeholder="Your name" required>
-          <input id="phone" type="tel" placeholder="Phone number" required>
+
+
+        <form
+          class="contact-form"
+          onsubmit="sendMessage(event)"
+        >
+
+          <input
+            id="name"
+            type="text"
+            placeholder="Your name"
+            required
+          >
+
+          <input
+            id="phone"
+            type="tel"
+            placeholder="Phone number"
+            required
+          >
+
           <select id="interest" required>
-            <option value="">What are you interested in?</option>
-            <option>Early Bell Ice Cream</option>
-            <option>Creamier Dela Ice Cream Powder</option>
-            <option>Machine Operation Training</option>
-            <option>Product Handling</option>
-            <option>Product Costing</option>
+
+            <option value="">
+              What are you interested in?
+            </option>
+
+            <option>
+              Early Bell Ice Cream
+            </option>
+
+            <option>
+              Creamier Dela Ice Cream Powder
+            </option>
+
+            <option>
+              Machine Operation Training
+            </option>
+
+            <option>
+              Table Top Soft Serve Machine
+            </option>
+
+            <option>
+              Batch Machine
+            </option>
+
+            <option>
+              Product Handling
+            </option>
+
+            <option>
+              Product Costing
+            </option>
+
           </select>
-          <textarea id="message" rows="5" placeholder="Tell us what you need..." required></textarea>
-          <button class="btn btn-primary" type="submit">Send Enquiry</button>
-          <p class="form-note">The button opens WhatsApp with your enquiry ready to send.</p>
+
+
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Tell us what you need..."
+            required
+          ></textarea>
+
+
+          <button
+            class="btn btn-primary"
+            type="submit"
+          >
+            Send Enquiry
+          </button>
+
+          <p class="form-note">
+            The button opens WhatsApp with your enquiry ready to send.
+          </p>
+
         </form>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer>
+
     <div class="container footer-inner">
-      <div><strong>KOFEBD GLOBAL RESOURCES</strong><span>Early Bell Ice Cream • Nigeria</span></div>
-      <p>© <span id="year"></span> Kofebd Global Resources. All rights reserved.</p>
+
+      <div>
+        <strong>KOFEBD GLOBAL RESOURCES</strong>
+        <span>Early Bell Ice Cream • Nigeria</span>
+      </div>
+
+      <p>
+        © <span id="year"></span>
+        Kofebd Global Resources. All rights reserved.
+      </p>
+
     </div>
+
   </footer>
 
+
+  <!-- MACHINE SLIDER JAVASCRIPT -->
+  <script>
+
+    let currentMachine = 0;
+
+    const machineSlides =
+      document.querySelectorAll(".machine-slide");
+
+    const machineDots =
+      document.querySelectorAll(".machine-dot");
+
+    const machineCounter =
+      document.getElementById("machineCounter");
+
+
+    function showMachine(index) {
+
+      if (index >= machineSlides.length) {
+        index = 0;
+      }
+
+      if (index < 0) {
+        index = machineSlides.length - 1;
+      }
+
+      currentMachine = index;
+
+
+      machineSlides.forEach(function(slide, i) {
+
+        slide.classList.toggle(
+          "active",
+          i === currentMachine
+        );
+
+      });
+
+
+      machineDots.forEach(function(dot, i) {
+
+        dot.classList.toggle(
+          "active",
+          i === currentMachine
+        );
+
+      });
+
+
+      machineCounter.textContent =
+        (currentMachine + 1) +
+        " / " +
+        machineSlides.length;
+
+    }
+
+
+    function changeMachine(direction) {
+
+      showMachine(
+        currentMachine + direction
+      );
+
+    }
+
+
+    // Swipe support for phones
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const machineSlider =
+      document.querySelector(".machine-slider");
+
+
+    machineSlider.addEventListener(
+      "touchstart",
+      function(event) {
+
+        touchStartX =
+          event.changedTouches[0].screenX;
+
+      },
+      { passive: true }
+    );
+
+
+    machineSlider.addEventListener(
+      "touchend",
+      function(event) {
+
+        touchEndX =
+          event.changedTouches[0].screenX;
+
+        const difference =
+          touchStartX - touchEndX;
+
+
+        if (Math.abs(difference) > 50) {
+
+          if (difference > 0) {
+            changeMachine(1);
+          } else {
+            changeMachine(-1);
+          }
+
+        }
+
+      },
+      { passive: true }
+    );
+
+  </script>
+
+
+  <!-- YOUR EXISTING WEBSITE JAVASCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
